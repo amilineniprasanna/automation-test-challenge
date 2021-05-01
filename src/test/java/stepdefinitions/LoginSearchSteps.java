@@ -41,7 +41,7 @@ public class LoginSearchSteps extends TestUtilities {
 
     @Then("it should display login error")
     public void verifyLoginError() {
-        assertTrue("Login error expected", wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login_error-0"))).isDisplayed());
+        assertTrue("Login error expected", wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login_error"))).isDisplayed());
     }
 
     @After

@@ -1,15 +1,14 @@
-# Getting started 
+# Instructions to run tests
 
-What you need:
+What we need:
 1. Git
 2. Docker Desktop running 
 
-How to run:
-1. cd Users
-2. git clone https://github.com/amilineniprasanna/automation-test-challenge.git
-3. cd Users/automation-test-challenge
-4. docker-compose up
+How to run from terminal/command prompt:
+1. git clone https://github.com/amilineniprasanna/automation-test-challenge.git
+2. cd automation-test-challenge
+3. docker-compose up
 
 Reports:
-1. UI test reports generated as html and are published online. Report path can be copied from console output.
-2. API reports are generated as html automation-test-challenge/target/surefire-reports/src.test.resources.karatefeatures.restapi.html
+1. UI test reports location - automation-test-challenge/target/cucumber-report.html
+2. API test reports location - automation-test-challenge/target/surefire-reports/src.test.resources.karatefeatures.restapi.html

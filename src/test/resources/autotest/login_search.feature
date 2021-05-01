@@ -7,8 +7,8 @@ Feature: Login and Search wordpress org
     Then it should display login error
     Examples:
       |username             |password             |
-      |abcxyztest1234       |                     |
-      |                     |abcxyztest1234       |
+      |test                 |                     |
+      |                     |test                 |
       |test                 |test                 |
 
   Scenario: Login with correct credentials and search
