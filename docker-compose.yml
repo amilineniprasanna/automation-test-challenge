@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+
+  chrome:
+    image: selenium/node-chrome:latest
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - hub
+    environment:
+      HUB_HOST: hub
+
+  hub:
+    image: selenium/hub:latest
+    ports:
+      - "4444:4444"
+
+  automation-test-challenge:
+    image: maven:3.8.1-jdk-8-slim
+#    ports:
+#      - "8080:8080"
+#      - "9090:9090"
+    depends_on:
+      - chrome
+    volumes:
+      - ~/.m2:/root/.m2
+      - .:/home/automation-test-challenge
+    working_dir: /home/automation-test-challenge
+    command: mvn install
+

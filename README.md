@@ -1,28 +1,15 @@
-# Automation Test Challenge Instructions
+# Getting started 
 
-Write an automation test script that:
- 1. Select a site a that has an a modern (REST) api and modern frontend (can be a local project as long as it's packaged / started with the scrips)
- 2. Create a ui automation script that has at least 3 steps. E.g. login, navigate and search.
- 3. Create an API automation test that performs the steps listed above just via api calls.
- 4. Create a simple UI that calls the API and displays the customer and the customers orders
+What you need:
+1. Git
+2. Docker Desktop running 
 
-## General Approach and Assumptions
+How to run:
+1. cd Users
+2. git clone https://github.com/amilineniprasanna/automation-test-challenge.git
+3. cd Users/automation-test-challenge
+4. docker-compose up
 
-- Solution should be implemented in a selenium based framework
-- Solution should be executed by a single bash script and not via a UI
-- The solution should be executed on any OS that has bash, don't tie it to OS specific dependencies
-- Ensure script pulls in any dependencies required to execute or clearly document what packages+versions need to be installed
-
-## Criteria
-
-Your work will be evaluated primarily on:
-
-- Consistency of coding style and script structure
-- Clean code and re-useability
-
-
-## How to submit your work
-
- 1. Fork this project on github.
- 2. Update this README.md file with instructions on how to build/test/run your script(s).
- 3. When you're finished, send us the URL of your public repository.
+Reports:
+1. UI test reports generated as html and are published online. Report path can be copied from console output.
+2. API reports are generated as html automation-test-challenge/target/surefire-reports/src.test.resources.karatefeatures.restapi.html
