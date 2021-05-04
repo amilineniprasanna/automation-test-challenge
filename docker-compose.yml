@@ -21,7 +21,6 @@ services:
     depends_on:
       - chrome
     volumes:
-      - ~/.m2:/root/.m2
       - .:/home/automation-test-challenge
     working_dir: /home/automation-test-challenge
     command: mvn install

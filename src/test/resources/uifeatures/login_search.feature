@@ -8,13 +8,9 @@ Feature: Login and Search wordpress org
     Examples:
       |username             |password             |
       |test                 |                     |
-      |                     |test                 |
       |test                 |test                 |
 
   Scenario: Login with correct credentials and search
     Given user is on login page
     When enters username "aconextesting1" password "aconextesting1secret" and clicks login
     Then user should be able to perform search
-
-
-

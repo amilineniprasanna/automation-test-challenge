@@ -1,22 +1,21 @@
-package autotest;
+package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import static org.junit.Assert.*;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
 import java.util.concurrent.TimeUnit;
 
-public class LoginSearchSteps extends TestUtilities {
+public class LoginSearchSteps {
     public static WebDriverWait wait;
+    public RemoteWebDriver driver;
 
-    @Before
-    public void beforeScenario() {
-        launchBrowser();
+    public LoginSearchSteps() {
+        driver = Hooks.driver;
     }
 
     @Given("user is on login page")
@@ -44,8 +43,4 @@ public class LoginSearchSteps extends TestUtilities {
         assertTrue("Login error expected", wait.until(ExpectedConditions.presenceOfElementLocated(By.id("login_error"))).isDisplayed());
     }
 
-    @After
-    public void afterScenario() {
-        tearDown();
-    }
 }
